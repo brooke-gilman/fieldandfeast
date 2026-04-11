@@ -1,0 +1,141 @@
+/* CSS BY Vicki Gilman */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+
+/* CSS RESET */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+img {
+max-width: 100%;
+display: block;
+height: auto;
+}
+
+ul {
+list-style: none;
+}
+
+
+/* ROOT VARIABLES */
+
+:root {
+--midnight-blue: #1F2A44;
+--olive-green: #76885B;
+--champagne-gold: #E5C185;
+--linen: #F8F4EC;
+--dark-charcoal: #2B2B2B;
+--soft-white: #FAF9F6;
+
+--heading-font: "Playfair Display", serif;
+--body-font: Arial, sans-serif;
+}
+
+
+/* GLOBAL STYLES (mobile first/small) */
+
+body {
+font-family: var(--body-font);
+background-color: var(--linen);
+color: var(--dark-charcoal);
+line-height: 1.6;
+padding: 1rem;
+}
+
+header {
+text-align: center;
+padding-bottom: 2rem;
+}
+
+h1, h2, h3 {
+font-family: var(--heading-font);
+color: var(--midnight-blue);
+margin-bottom: .5rem;
+}
+
+nav ul {
+display: flex;
+flex-direction: column;
+gap: .5rem;
+margin-top: 1rem;
+}
+
+nav a {
+text-decoration: none;
+color: var(--midnight-blue);
+font-weight: 600;
+}
+
+section {
+margin-bottom: 2rem;
+}
+
+.gallery {
+display: grid;
+gap: 1rem;
+}
+
+figure {
+background: var(--soft-white);
+padding: .5rem;
+}
+
+footer {
+border-top: 2px solid var(--champagne-gold);
+padding-top: 1rem;
+text-align: center;
+}
+
+
+/* MEDIA QUERY (medium) */
+
+@media (min-width: 600px) {
+
+nav ul {
+flex-direction: row;
+justify-content: center;
+}
+
+.gallery {
+grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+
+/* MEDIA QUERY (large) */
+
+@media (min-width: 900px) {
+
+.gallery {
+grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+}
+
+
+/* MEDIA QUERY (xl) */
+
+@media (min-width: 1200px) {
+
+body {
+max-width: 1200px;
+margin: auto;
+}
+
+.gallery {
+grid-template-columns: repeat(5, 1fr);
+}
+
+}
